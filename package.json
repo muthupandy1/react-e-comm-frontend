@@ -24,12 +24,15 @@
   "web-vitals": "^2.1.4"
 },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
+  },
+  "devDependencies": {
+    "serve": "^14.2.0"
   },
   "eslintConfig": {
     "extends": [
