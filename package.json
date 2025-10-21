@@ -1,6 +1,7 @@
 {
   "homepage": "https://muthupandy1.github.io/react-e-comm-frontend",
   "name": "frontend",
+  "homepage": ".",
   "proxy": "https://django-e-comm-backend.onrender.com/",
   "version": "0.1.0",
   "private": true,
