@@ -10,11 +10,14 @@ import {
 
 import axios from 'axios';
 
+const BASE_URL = process.env.REACT_APP_API_URL
+
 export const listProducts = () => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_LIST_REQUEST })
 
-        const { data } = await axios.get("/api/products/")
+        // const { data } = await axios.get("/api/products/")
+        const { data } = await axios.get(`${BASE_URL}/api/products/`)
 
         dispatch({ type: PRODUCT_LIST_SUCESS, payload: data })
 
@@ -35,8 +38,9 @@ export const listProductDetails = (id) => async (dispatch) => {
     try {
         dispatch({ type: PRODUCT_DETAILS_REQUEST })
 
-        const { data } = await axios.get(`/api/products/${id}`)
-
+        // const { data } = await axios.get(`/api/products/${id}`)
+        const { data } = await axios.get(`${BASE_URL}/api/products/${id}`)
+        
         dispatch({ type: PRODUCT_DETAILS_SUCESS, payload: data })
 
     } catch (error) {
